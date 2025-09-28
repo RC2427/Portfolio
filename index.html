@@ -35,15 +35,22 @@
             transition: width .3s;
         }
         .nav-link:hover::after { width: 100%; }
+        /* Hide the decorative line by default */
         .section-heading::after {
-            content: "";
-            display: block;
-            position: relative;
-            top: -12px;
-            width: 300px;
-            height: 1px;
-            margin-left: 300px;
-            background-color: #3f3f46; /* Zinc 700 */
+            display: none;
+        }
+        /* On medium screens (md) and up, display the line */
+        @media (min-width: 768px) {
+            .section-heading::after {
+                content: "";
+                display: block;
+                position: relative;
+                top: -12px;
+                width: 300px;
+                height: 1px;
+                margin-left: 300px;
+                background-color: #3f3f46; /* Zinc 700 */
+            }
         }
     </style>
 </head>
